@@ -2,13 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+// import {BrowserRouter as Router} from 'react-router-dom'
+import { ProductProvider } from './Context';
 import reportWebVitals from './reportWebVitals';
+import NewApp from './NewApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+   <ProductProvider>
   <React.StrictMode>
-    <App />
+    <App />  
+    {/* <NewApp /> */}
   </React.StrictMode>
+
+   </ProductProvider> 
+
 );
 
 // If you want to start measuring performance in your app, pass a function
